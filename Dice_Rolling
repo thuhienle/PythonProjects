@@ -1,0 +1,16 @@
+import random
+
+play = "Y"
+
+while play == "Y":
+    print('Welcome to Dice Rolling')
+    number = random.randint(1,7)
+    guess = int(input('Please guess the number between 1 and 6! '))
+    if guess > number or guess < number:
+        print('Sorry! You guessed it wrong')
+    else:
+        print('Congratulation!!! You guessed it right')
+    print('The generated number is '+str(number))
+    play = input('Do you want to play Dice Rolling? Y/N ')
+    while play != "Y" and play != "N":
+        play = input('Do you want to play Dice Rolling? Y/N ')
